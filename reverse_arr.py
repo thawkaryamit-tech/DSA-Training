@@ -45,13 +45,13 @@ class Stack:
 
 if __name__ == '__main__':
     obj = Stack()
-    a="jnajank"
+    arr=[234235,235,235,5]
 
     # push
-    for i in a:
+    for i in arr:
         obj.push(i)
     # pop
-    for i in a:
+    for i in arr:
         obj.pop()
-    print(a)
+    print(arr)
 

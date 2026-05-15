@@ -5,7 +5,7 @@ class Stack:
     def __init__(self):
         self.stack = []
         self.top = -1
-        self.CAPACITY = 100
+        self.CAPACITY = 5
 
     def isFull(self):
         if self.top == self.CAPACITY - 1:
@@ -41,17 +41,28 @@ class Stack:
 
     def peek(self):
         print(self.top)
-
-
+        
 if __name__ == '__main__':
     obj = Stack()
-    a="jnajank"
 
-    # push
-    for i in a:
-        obj.push(i)
-    # pop
-    for i in a:
-        obj.pop()
-    print(a)
+    while True:
+        print("\n1. Push")
+        print("2. Pop")
+        print("3. Peek")
+        print("4. Traverse")
+        print("0. Exit")
 
+        ch = int(input("Select any choice : "))
+        if ch == 1:
+            ele = int(input("Enter data : "))
+            obj.push(ele)
+        elif ch == 2:
+            ele = obj.pop()
+            if ele is not None:
+                print(ele, "is popped")
+        elif ch == 3:
+            obj.peek()
+        elif ch == 4:
+            obj.traverse()
+        elif ch == 0:
+            sys.exit(0)
