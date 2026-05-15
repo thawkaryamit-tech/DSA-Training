@@ -1,9 +1,12 @@
-ls=[]
-print(type(ls))
-print("*******************")
+arr=[[1,2,3],[4,5,6],[7,8,9]]
+print(arr)
 
-ls=list()
-ls=[1,2,3,4,5,6,7,8,9,10]
-print(type(ls))
-print("*******************")
 
+for i in range(len(arr)):
+    print("i =", i, end=" ")
+    for j in range(len(arr[i])):
+        print(arr[i][j],end=" ")
+    print()
+
+
+    
