@@ -1,13 +1,16 @@
-n = int(input("Enter number: "))
-rev = 0
-save = n
+s="A man , a plan, a canal : Panama"
+str="" 
 
-while n > 0:
-    rem = n % 10
-    rev = rev * 10 + rem
-    n = n // 10
+for i in s:
+    if i.isalpha():
+        str += i.lower()
+print(str)
 
-if rev == save:
-    print("Palindrome")
+rev=''
+for i in s:
+    rev=i+rev
+
+if str==rev:
+    print("palimdrome")
 else:
-    print("Not Palindrome")
+    print("not palimdrome")

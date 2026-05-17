@@ -1,12 +1,9 @@
-class Student:
-    def show(self):
-        print("I am in SHOW")
-#    def showA():
-#        print("i am in showA")
-s = Student();
-s.show();
-
-# Student.showA();
-
-#Student s=new Student();
-#new Student();
+arr1=[1,2,2,1]
+arr2=[2,2]
+arr3=[]
+for i in arr1:
+    for j in arr2:
+        if i==j: 
+            if i not in arr3:
+                arr3.append(i)
+print(arr3)
