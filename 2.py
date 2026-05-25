@@ -1,10 +1,9 @@
-arr=[11,22,33,44,55,66,77,88]
-print(arr[1:5])
-print(arr[4:6])
-print(arr[:6])
-print(arr[4:])
-print(arr[:])
-print(arr[::2])
-print(arr[::3])
-print(arr[::-1])
-print(arr[::-2])
+import re
+count=0
+#pattern=re.compile("ab")
+#matcher=pattern.finditer("abaababaab")
+matcher=re.finditer("ab","abaababaab")
+for match in matcher:
+    count+=1
+    print(match.start(),'...',match.end(),'...',match.group())
+    print('total no of occurences:',count)

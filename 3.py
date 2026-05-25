@@ -1,57 +1,12 @@
-import sys
+import re
+x="[abc]"
+x="[^abc]"
+x="[a-z]"
+x="[0-9]"
+x="[a-zA-z0-9]"
+x="[^a-zA-z0-9]"
 
-class Stack:
+matcher=re.finditer(x,"a7bD2@k2k2&D8z")
 
-    def __init__(self):
-        self.stack = []
-        self.top = -1
-        self.CAPACITY = 100
-
-    def isFull(self):
-        if self.top == self.CAPACITY - 1:
-            return True
-        else:
-            return False
-
-    def push(self, ele):
-        if self.isFull():
-            print("Stack is Full")
-        else:
-            self.top += 1
-            self.stack.append(ele)
-            print(ele, "is pushed")
-
-    def traverse(self):
-        for i in range(self.top,-1,-1):
-            print(self.stack[i])
-    def isEmpty(self):
-        if self.top == -1:
-            return True
-        else:
-            return False
-
-    def pop(self):
-        if self.isEmpty():
-            print("Stack is Empty")
-        else:
-            ele = self.stack[self.top]
-            self.stack.pop()
-            self.top -= 1
-            return ele
-
-    def peek(self):
-        print(self.top)
-
-
-if __name__ == '__main__':
-    obj = Stack()
-    a="jnajank"
-
-    # push
-    for i in a:
-        obj.push(i)
-    # pop
-    for i in a:
-        obj.pop()
-    print(a)
-
+for match in matcher:
+    print(match.start(),'...',match.group())
